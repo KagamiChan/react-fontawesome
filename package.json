@@ -24,6 +24,7 @@
     "lodash.memoize": "^4.1.2"
   },
   "scripts": {
-    "format": "prettier --single-quote --no-semi --trailing-comma all ./**/*.ts  --write"
+    "format": "prettier --single-quote --no-semi --trailing-comma all ./**/*.ts  --write",
+    "build": "tsc"
   }
 }
