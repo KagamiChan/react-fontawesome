@@ -4,7 +4,7 @@
  */
 
 declare module '@fortawesome/react-fontawesome' {
-  import { CSSProperties } from 'react'
+  import { CSSProperties, SFC } from 'react'
   import {
     Transform,
     IconProp,
@@ -15,7 +15,9 @@ declare module '@fortawesome/react-fontawesome' {
     FaSymbol,
   } from '@fortawesome/fontawesome'
 
-  export function FontAwesomeIcon(props: Props): JSX.Element
+  const FontAwesomeIcon: SFC<Props>
+
+  export default FontAwesomeIcon
 
   export interface Props {
     icon: IconProp
