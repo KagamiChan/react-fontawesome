@@ -19,7 +19,7 @@ import shim from '@skagami/react-fontawesome/shim'
 shim('google-plus') // returns ['fab', 'google-plus-o']
 ```
 
-and an inject method for react-fontawesome so that you don't even need to do the replacement (NOT IMPLEMENTED YET):
+and an inject method for react-fontawesome so that you don't even need to do the replacement:
 
 ```js
 import '@skagami/react-fontawesome/inject'
