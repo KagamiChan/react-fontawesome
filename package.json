@@ -1,0 +1,20 @@
+{
+  "name": "@skagami/react-fontawesome",
+  "version": "1.0.0",
+  "description": "re-implementation of official component, with unofficial component compat",
+  "main": "index.js",
+  "repository": "git@github.com:KagamiChan/react-fontawesome.git",
+  "author": "Kagami <moe.pascal@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/react": "^16.0.40",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  },
+  "peerDependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/react-fontawesome": "^0.0.17",
+    "react": "^16.2.0"
+  }
+}
