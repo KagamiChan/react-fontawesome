@@ -12,7 +12,7 @@ declare module '@fortawesome/react-fontawesome' {
     SizeProp,
     PullProp,
     RotateProp,
-    FaSymbol
+    FaSymbol,
   } from '@fortawesome/fontawesome'
 
   export function FontAwesomeIcon(props: Props): JSX.Element
