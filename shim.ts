@@ -1,3 +1,4 @@
+import { MemoizedFunction } from 'lodash'
 import memoize from 'lodash.memoize'
 
 export type shimElement = string | null
@@ -479,5 +480,7 @@ const getShimFaName = memoize((nameV4: string): string[] => {
   const shim: shimEntry | undefined = shims.find(([name]: shimEntry) => name === nameV4)
   return shim ? [shim[1] || 'fas', shim[2] || nameV4] : ['fas',  nameV4]
 })
+
+export type MemoizedFunction = MemoizedFunction
 
 export default getShimFaName
