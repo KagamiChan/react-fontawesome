@@ -5,3 +5,5 @@ specs/
 .gitignore
 jest.config.je
 tslint.json
+
+.circleci/
