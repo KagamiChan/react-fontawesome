@@ -1,0 +1,7 @@
+*.log
+yarn.lock
+
+specs/
+.gitignore
+jest.config.je
+tslint.json
