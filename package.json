@@ -28,6 +28,8 @@
   },
   "scripts": {
     "format": "prettier --single-quote --no-semi --trailing-comma all ./**/*.ts  --write",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest --watch",
+    "test:ci": "jest"
   }
 }
