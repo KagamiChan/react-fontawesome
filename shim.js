@@ -3,7 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var lodash_memoize_1 = __importDefault(require("lodash.memoize"));
+var find_1 = __importDefault(require("lodash/find"));
+var memoize_1 = __importDefault(require("lodash/memoize"));
 /**
  * shims from https://github.com/FortAwesome/Font-Awesome/blob/31281606f5205b0191c17c3b4d2d56e1ddbb2dc6/svg-with-js/js/fa-v4-shims.js
  * by @fontawesome, MIT License
@@ -475,8 +476,8 @@ var shims = [
  * @param {String} nameV4 icon name in v4
  * @returns {Array} [ type, prefixed name ]
  */
-var getShimFaName = lodash_memoize_1.default(function (nameV4) {
-    var shim = shims.find(function (_a) {
+var getShimFaName = memoize_1.default(function (nameV4) {
+    var shim = find_1.default(shims, function (_a) {
         var name = _a[0];
         return name === nameV4;
     });
