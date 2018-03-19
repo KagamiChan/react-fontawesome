@@ -481,6 +481,8 @@ var getShimFaName = memoize_1.default(function (nameV4) {
         var name = _a[0];
         return name === nameV4;
     });
-    return shim ? [shim[1] || 'fas', shim[2] || nameV4] : ['fas', nameV4];
+    return shim
+        ? [shim[1] || 'fas', shim[2] || nameV4]
+        : ['fas', nameV4];
 });
 exports.default = getShimFaName;

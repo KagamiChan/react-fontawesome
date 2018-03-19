@@ -30,6 +30,6 @@ var react_1 = __importDefault(require("react"));
 var react_fontawesome_2 = __importDefault(require("react-fontawesome"));
 var shim_1 = __importDefault(require("./shim"));
 react_fontawesome_2.default.prototype.render = function () {
-    var _a = this.props, name = _a.name, rotation = _a.rotate, props = __rest(_a, ["name", "rotate"]);
-    return react_1.default.createElement(react_fontawesome_1.default, __assign({ icon: shim_1.default(name), rotation: rotation }, props));
+    var _a = this.props, name = _a.name, children = _a.children, props = __rest(_a, ["name", "children"]);
+    return react_1.default.createElement(react_fontawesome_1.default, __assign({ icon: shim_1.default(name) }, props));
 };

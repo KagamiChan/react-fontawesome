@@ -1,9 +1,9 @@
+import { IconName, IconPrefix } from '@fortawesome/fontawesome-common-types'
 import { MemoizedFunction } from 'lodash'
 import find from 'lodash/find'
 import memoize from 'lodash/memoize'
 
-export type shimElement = string | null
-export type shimEntry = [string, shimElement, shimElement]
+export type shimEntry = [string, IconPrefix | null, IconName | null]
 
 /**
  * shims from https://github.com/FortAwesome/Font-Awesome/blob/31281606f5205b0191c17c3b4d2d56e1ddbb2dc6/svg-with-js/js/fa-v4-shims.js
@@ -477,12 +477,17 @@ const shims: shimEntry[] = [
  * @param {String} nameV4 icon name in v4
  * @returns {Array} [ type, prefixed name ]
  */
-const getShimFaName = memoize((nameV4: string): string[] => {
+const getShimFaName = memoize((nameV4: IconName | string): [
+  IconPrefix,
+  IconName
+] => {
   const shim: shimEntry | undefined = find(
     shims,
     ([name]: shimEntry) => name === nameV4,
   )
-  return shim ? [shim[1] || 'fas', shim[2] || nameV4] : ['fas', nameV4]
+  return shim
+    ? [shim[1] || 'fas', shim[2] || (nameV4 as IconName)]
+    : ['fas', nameV4 as IconName]
 })
 
 export type MemoizedFunction = MemoizedFunction
