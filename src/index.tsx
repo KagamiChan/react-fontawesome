@@ -1,4 +1,5 @@
-import Icon, { Props as IconProps } from '@fortawesome/react-fontawesome'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon, Props as IconProps } from '@fortawesome/react-fontawesome'
 import React, { SFC } from 'react'
 import { FontAwesomeProps } from 'react-fontawesome'
 
@@ -13,8 +14,8 @@ export type Props = FontAwesomeProps & IconProps & {
 const ReactFontawesome: SFC<Props> = (props: Props) => {
   const { name } = props
   return (
-    <Icon
-      icon={name}
+    <FontAwesomeIcon
+      icon={name as IconProp}
     />
   )
 }
@@ -22,7 +23,7 @@ const ReactFontawesome: SFC<Props> = (props: Props) => {
 ReactFontawesome.displayName = 'ReactFontawesome'
 
 ReactFontawesome.propTypes = {
-  ...Icon.propTypes,
+  ...FontAwesomeIcon.propTypes,
 }
 
 export default ReactFontawesome

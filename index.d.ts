@@ -1,4 +1,5 @@
-/// <reference types="fortawesome__react-fontawesome" />
+/// <reference types="react-fontawesome" />
+/// <reference types="react" />
 import { Props as IconProps } from '@fortawesome/react-fontawesome';
 import { SFC } from 'react';
 import { FontAwesomeProps } from 'react-fontawesome';

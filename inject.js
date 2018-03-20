@@ -25,11 +25,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_fontawesome_1 = __importDefault(require("@fortawesome/react-fontawesome"));
+var react_fontawesome_1 = require("@fortawesome/react-fontawesome");
 var react_1 = __importDefault(require("react"));
 var react_fontawesome_2 = __importDefault(require("react-fontawesome"));
 var shim_1 = __importDefault(require("./shim"));
 react_fontawesome_2.default.prototype.render = function () {
-    var _a = this.props, name = _a.name, children = _a.children, props = __rest(_a, ["name", "children"]);
-    return react_1.default.createElement(react_fontawesome_1.default, __assign({ icon: shim_1.default(name) }, props));
+    var _a = this.props, 
+    // rotate is renamed rotation
+    rotate = _a.rotate, 
+    // below are props that will be omit
+    cssModule = _a.cssModule, name = _a.name, stack = _a.stack, tag = _a.tag, 
+    // other props will be directly passed
+    props = __rest(_a, ["rotate", "cssModule", "name", "stack", "tag"]);
+    return (react_1.default.createElement(react_fontawesome_1.FontAwesomeIcon, __assign({ icon: shim_1.default(name) }, props, { rotation: rotate })));
 };

@@ -11,12 +11,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_fontawesome_1 = __importDefault(require("@fortawesome/react-fontawesome"));
+var react_fontawesome_1 = require("@fortawesome/react-fontawesome");
 var react_1 = __importDefault(require("react"));
 var ReactFontawesome = function (props) {
     var name = props.name;
-    return (react_1.default.createElement(react_fontawesome_1.default, { icon: name }));
+    return (react_1.default.createElement(react_fontawesome_1.FontAwesomeIcon, { icon: name }));
 };
 ReactFontawesome.displayName = 'ReactFontawesome';
-ReactFontawesome.propTypes = __assign({}, react_fontawesome_1.default.propTypes);
+ReactFontawesome.propTypes = __assign({}, react_fontawesome_1.FontAwesomeIcon.propTypes);
 exports.default = ReactFontawesome;

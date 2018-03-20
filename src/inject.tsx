@@ -4,7 +4,7 @@
  * @example import '@skagami/react-fontawesome/inject'
  */
 
-import FAIcon from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import FA from 'react-fontawesome'
 import getShimFaName from './shim'
@@ -28,30 +28,22 @@ interface IProps {
 
 FA.prototype.render = function(this: React.Component<IProps & FA.FontAwesomeProps>) {
   const {
-    border,
-    fixedWidth,
-    flip,
-    inverse,
-    name,
-    pulse,
+    // rotate is renamed rotation
     rotate,
-    spin,
+    // below are props that will be omit
+    cssModule,
+    name,
+    stack,
+    tag,
+    // other props will be directly passed
     ...props,
   } = this.props
 
   return (
-    <FAIcon
+    <FontAwesomeIcon
       icon={getShimFaName(name)}
       {...props}
-      {...{
-        border,
-        fixedWidth,
-        flip,
-        inverse,
-        pulse,
-        rotate,
-        spin,
-      }}
+      rotation={rotate}
     />
     )
 }

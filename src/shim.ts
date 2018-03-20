@@ -1,4 +1,4 @@
-import { IconName, IconPrefix } from '@fortawesome/fontawesome-common-types'
+import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core'
 import { MemoizedFunction } from 'lodash'
 import find from 'lodash/find'
 import memoize from 'lodash/memoize'
