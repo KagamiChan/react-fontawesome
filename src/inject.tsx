@@ -19,7 +19,7 @@ interface IProps {
   inverse?: boolean
   name: string
   pulse?: boolean
-  rotate?: number
+  rotate?: 90 | 180 | 270
   size?: FA.FontAwesomeSize
   spin?: boolean
   stack?: FA.FontAwesomeStack
@@ -27,6 +27,31 @@ interface IProps {
 }
 
 FA.prototype.render = function(this: React.Component<IProps & FA.FontAwesomeProps>) {
-  const { name, children, ...props } = this.props
-  return <FAIcon icon={getShimFaName(name)} {...props} />
+  const {
+    border,
+    fixedWidth,
+    flip,
+    inverse,
+    name,
+    pulse,
+    rotate,
+    spin,
+    ...props,
+  } = this.props
+
+  return (
+    <FAIcon
+      icon={getShimFaName(name)}
+      {...props}
+      {...{
+        border,
+        fixedWidth,
+        flip,
+        inverse,
+        pulse,
+        rotate,
+        spin,
+      }}
+    />
+    )
 }

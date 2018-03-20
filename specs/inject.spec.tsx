@@ -41,7 +41,7 @@ describe('inject should work', () => {
     expect(wrapper.contains(
       <Icon
         icon={['fab', 'google-plus-g']}
-        rotation={90}
+        rotate={90}
         size="2x"
         flip="horizontal"
         stack="1x"
