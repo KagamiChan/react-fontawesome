@@ -11,6 +11,11 @@ import {
 import React, { SFC } from 'react'
 import shim from './shim'
 
+// Diff / Omit taken from https://github.com/Microsoft/TypeScript/issues/12215#issuecomment-311923766
+export type Diff<T extends string, U extends string> = ({ [P in T]: P } &
+  { [P in U]: never } & { [x: string]: never })[T]
+export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>
+
 /**
  * react-fontawesome's extra props
  */
@@ -33,10 +38,12 @@ export interface IFontAwesomeProps {
   fas?: boolean
   fa?: boolean
   // ensure icon could be unset
-  icon: IconProps['icon'] | undefined
+  icon?: IconProps['icon']
 }
 
-export type Props = IFontAwesomeExtraProps & IconProps & IFontAwesomeProps
+export type Props = IFontAwesomeExtraProps &
+  Omit<IconProps, 'icon'> &
+  IFontAwesomeProps
 
 /**
  * Method to get the final names for font-awesome 5
