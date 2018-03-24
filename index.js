@@ -53,7 +53,7 @@ var getFaName = function (_a) {
     return shim_1.default(finalName);
 };
 var allFalsy = function (values) {
-    return values.reduce(function (a, b) { return a || b; }, false);
+    return !values.reduce(function (a, b) { return b || a; }, false);
 };
 var isV4 = function (_a) {
     var icon = _a.icon, name = _a.name, tag = _a.tag, fa = _a.fa, fas = _a.fas, far = _a.far, fal = _a.fal, fab = _a.fab;
