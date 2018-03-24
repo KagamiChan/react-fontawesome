@@ -25,7 +25,7 @@ var react_1 = __importDefault(require("react"));
 var shim_1 = __importDefault(require("./shim"));
 /**
  * Method to get the final names for font-awesome 5
- * @param fa
+ * @param v5
  * @param fas
  * @param far
  * @param fal
@@ -35,7 +35,7 @@ var shim_1 = __importDefault(require("./shim"));
  * @returns {Array} [ type, prefixed name ]
  */
 var getFaName = function (_a) {
-    var icon = _a.icon, name = _a.name, tag = _a.tag, fa = _a.fa, fas = _a.fas, far = _a.far, fal = _a.fal, fab = _a.fab;
+    var icon = _a.icon, name = _a.name, tag = _a.tag, fas = _a.fas, far = _a.far, fal = _a.fal, fab = _a.fab;
     var finalName = (icon || name);
     if (fas) {
         return ['fas', finalName];
@@ -56,12 +56,15 @@ var allFalsy = function (values) {
     return !values.reduce(function (a, b) { return b || a; }, false);
 };
 exports.isV4 = function (_a) {
-    var icon = _a.icon, name = _a.name, tag = _a.tag, fa = _a.fa, fas = _a.fas, far = _a.far, fal = _a.fal, fab = _a.fab;
-    if (typeof icon !== 'string' && typeof name !== 'string') {
+    var icon = _a.icon, name = _a.name, tag = _a.tag, v5 = _a.v5, fas = _a.fas, far = _a.far, fal = _a.fal, fab = _a.fab;
+    if (v5) {
         return false;
     }
-    if (tag || fa) {
+    if (tag) {
         return true;
+    }
+    if (typeof icon !== 'string' && typeof name !== 'string') {
+        return false;
     }
     if (!allFalsy([fas, far, fal, fab])) {
         return false;
@@ -78,9 +81,9 @@ var ReactFontawesome = function (props) {
     // below are props that will be omit
     cssModule = props.cssModule, name = props.name, stack = props.stack, tag = props.tag, 
     // semantic props
-    fa = props.fa, fas = props.fas, far = props.far, fal = props.fal, fab = props.fab, 
+    v5 = props.v5, fas = props.fas, far = props.far, fal = props.fal, fab = props.fab, 
     // other props will be directly passed
-    otherProps = __rest(props, ["icon", "rotate", "cssModule", "name", "stack", "tag", "fa", "fas", "far", "fal", "fab"]);
+    otherProps = __rest(props, ["icon", "rotate", "cssModule", "name", "stack", "tag", "v5", "fas", "far", "fal", "fab"]);
     var finalIcon = exports.isV4(props)
         ? getFaName(props)
         : icon;

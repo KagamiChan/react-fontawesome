@@ -29,10 +29,10 @@ export interface IFontAwesomeProps {
     far?: boolean;
     fab?: boolean;
     fas?: boolean;
-    fa?: boolean;
+    v5?: boolean;
     icon?: IconProps['icon'];
 }
 export declare type Props = IFontAwesomeExtraProps & Omit<IconProps, 'icon'> & IFontAwesomeProps;
-export declare const isV4: ({ icon, name, tag, fa, fas, far, fal, fab, }: Props) => boolean;
+export declare const isV4: ({ icon, name, tag, v5, fas, far, fal, fab, }: Props) => boolean;
 declare const ReactFontawesome: SFC<Props>;
 export default ReactFontawesome;

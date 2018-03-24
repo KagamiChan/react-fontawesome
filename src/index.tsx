@@ -36,7 +36,7 @@ export interface IFontAwesomeProps {
   far?: boolean
   fab?: boolean
   fas?: boolean
-  fa?: boolean
+  v5?: boolean
   // ensure icon could be unset
   icon?: IconProps['icon']
 }
@@ -47,7 +47,7 @@ export type Props = IFontAwesomeExtraProps &
 
 /**
  * Method to get the final names for font-awesome 5
- * @param fa
+ * @param v5
  * @param fas
  * @param far
  * @param fal
@@ -60,7 +60,6 @@ const getFaName = ({
   icon,
   name,
   tag,
-  fa,
   fas,
   far,
   fal,
@@ -90,17 +89,20 @@ export const isV4 = ({
   icon,
   name,
   tag,
-  fa,
+  v5,
   fas,
   far,
   fal,
   fab,
 }: Props): boolean => {
-  if (typeof icon !== 'string' && typeof name !== 'string') {
+  if (v5) {
     return false
   }
-  if (tag || fa) {
+  if (tag) {
     return true
+  }
+  if (typeof icon !== 'string' && typeof name !== 'string') {
+    return false
   }
   if (!allFalsy([fas, far, fal, fab])) {
     return false
@@ -122,7 +124,7 @@ const ReactFontawesome: SFC<Props> = (props: Props) => {
     stack,
     tag,
     // semantic props
-    fa,
+    v5,
     fas,
     far,
     fal,

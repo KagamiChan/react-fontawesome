@@ -51,10 +51,11 @@ and `name` prop is also supported:
 
 ### Icon version and name shimming
 The icon version is detected by the following procedure:
-- check if `icon` and `name` prop is `String`, if none of them is `String`, it is a v5 icon.
-- check if `tag` or `fa` is truthy, although `tag` will not take effect. if any of them is truthy, it is a v4 icon
-- check if `fas`, `far`, `fal` and `fab` is all falsy, if any of them is truthy, it is a v5 icon
-- check icon, if icon is truthy and it is not `String`, it is a v5 icon
+- check `v5`. If truthy, it is a v5 icon
+- check `tag`, although `tag` will not take effect. If truthy, it is a v4 icon
+- check if `icon` and `name` prop is `String`. If none of them is `String`, it is a v5 icon (and nothing will show up).
+- check if `fas`, `far`, `fal` and `fab` is all falsy. If any of them is truthy, it is a v5 icon
+- check `icon`. If `icon` is truthy and it is not `String`, it is a v5 icon
 - it should be a v4 icon
 
 V4 icon names will be shimmed to v5's

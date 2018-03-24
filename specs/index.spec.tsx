@@ -10,13 +10,14 @@ describe('wrapper component should work', () => {
   it('should detect icon version with simple props', () => {
     expect(isV4({})).toBe(false)
 
-    expect(isV4({ name: 'github' })).toBe(true)
-    expect(isV4({ icon: 'github' })).toBe(true)
+    expect(isV4({ icon: 'github', v5: true })).toBe(false)
+    expect(isV4({ name: 'github', v5: true })).toBe(false)
 
     expect(isV4({ icon: 'github', tag: 'span' })).toBe(true)
     expect(isV4({ name: 'github', tag: 'span' })).toBe(true)
-    expect(isV4({ icon: 'github', fa: true })).toBe(true)
-    expect(isV4({ name: 'github', fa: true })).toBe(true)
+
+    expect(isV4({ name: 'github' })).toBe(true)
+    expect(isV4({ icon: 'github' })).toBe(true)
 
     expect(isV4({ name: 'github', fas: true })).toBe(false)
     expect(isV4({ name: 'github', far: true })).toBe(false)
