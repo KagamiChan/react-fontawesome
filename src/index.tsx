@@ -79,7 +79,16 @@ const getFaName = ({
 const allFalsy = (values: any[]): boolean =>
   !values.reduce((a, b) => b || a, false)
 
-const isV4 = ({ icon, name, tag, fa, fas, far, fal, fab }: Props): boolean => {
+export const isV4 = ({
+  icon,
+  name,
+  tag,
+  fa,
+  fas,
+  far,
+  fal,
+  fab,
+}: Props): boolean => {
   if (typeof icon !== 'string' && typeof name !== 'string') {
     return false
   }

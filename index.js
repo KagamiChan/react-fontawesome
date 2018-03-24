@@ -55,7 +55,7 @@ var getFaName = function (_a) {
 var allFalsy = function (values) {
     return !values.reduce(function (a, b) { return b || a; }, false);
 };
-var isV4 = function (_a) {
+exports.isV4 = function (_a) {
     var icon = _a.icon, name = _a.name, tag = _a.tag, fa = _a.fa, fas = _a.fas, far = _a.far, fal = _a.fal, fab = _a.fab;
     if (typeof icon !== 'string' && typeof name !== 'string') {
         return false;
@@ -81,7 +81,7 @@ var ReactFontawesome = function (props) {
     fa = props.fa, fas = props.fas, far = props.far, fal = props.fal, fab = props.fab, 
     // other props will be directly passed
     otherProps = __rest(props, ["icon", "rotate", "cssModule", "name", "stack", "tag", "fa", "fas", "far", "fal", "fab"]);
-    var finalIcon = isV4(props)
+    var finalIcon = exports.isV4(props)
         ? getFaName(props)
         : icon;
     return react_1.default.createElement(react_fontawesome_1.FontAwesomeIcon, __assign({ icon: finalIcon, rotation: rotate }, otherProps));

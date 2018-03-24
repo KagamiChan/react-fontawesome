@@ -25,5 +25,6 @@ export interface IFontAwesomeProps {
     icon: IconProps['icon'] | undefined;
 }
 export declare type Props = IFontAwesomeExtraProps & IconProps & IFontAwesomeProps;
+export declare const isV4: ({ icon, name, tag, fa, fas, far, fal, fab, }: Props) => boolean;
 declare const ReactFontawesome: SFC<Props>;
 export default ReactFontawesome;
