@@ -101,10 +101,10 @@ export const isV4 = ({
   if (tag) {
     return true
   }
-  if (typeof icon !== 'string' && typeof name !== 'string') {
+  if (!allFalsy([fas, far, fal, fab])) {
     return false
   }
-  if (!allFalsy([fas, far, fal, fab])) {
+  if (typeof icon !== 'string' && typeof name !== 'string') {
     return false
   }
   if (icon && typeof icon !== 'string') {

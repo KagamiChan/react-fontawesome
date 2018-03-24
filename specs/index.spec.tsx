@@ -16,9 +16,6 @@ describe('wrapper component should work', () => {
     expect(isV4({ icon: 'github', tag: 'span' })).toBe(true)
     expect(isV4({ name: 'github', tag: 'span' })).toBe(true)
 
-    expect(isV4({ name: 'github' })).toBe(true)
-    expect(isV4({ icon: 'github' })).toBe(true)
-
     expect(isV4({ name: 'github', fas: true })).toBe(false)
     expect(isV4({ name: 'github', far: true })).toBe(false)
     expect(isV4({ name: 'github', fal: true })).toBe(false)
@@ -27,6 +24,9 @@ describe('wrapper component should work', () => {
     expect(isV4({ icon: 'github', far: true })).toBe(false)
     expect(isV4({ icon: 'github', fal: true })).toBe(false)
     expect(isV4({ icon: 'github', fab: true })).toBe(false)
+
+    expect(isV4({ name: 'github' })).toBe(true)
+    expect(isV4({ icon: 'github' })).toBe(true)
 
     expect(isV4({ icon: ['fab', 'github'] })).toBe(false)
   })
