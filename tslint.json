@@ -7,7 +7,8 @@
   "rules": {
     "quotemark": [true, "single", "jsx-double"],
     "semicolon": [true, "never"],
-    "max-line-length": [true, 140]
+    "max-line-length": [true, 140],
+    "trailing-comma": [true, {"esSpecCompliant": true}]
   },
   "rulesDirectory": []
 }

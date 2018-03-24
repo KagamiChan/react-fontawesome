@@ -26,7 +26,9 @@ interface IProps {
   tag?: string
 }
 
-FA.prototype.render = function(this: React.Component<IProps & FA.FontAwesomeProps>) {
+FA.prototype.render = function(
+  this: React.Component<IProps & FA.FontAwesomeProps>,
+) {
   const {
     // rotate is renamed rotation
     rotate,
@@ -36,14 +38,10 @@ FA.prototype.render = function(this: React.Component<IProps & FA.FontAwesomeProp
     stack,
     tag,
     // other props will be directly passed
-    ...props,
+    ...props
   } = this.props
 
   return (
-    <FontAwesomeIcon
-      icon={getShimFaName(name)}
-      {...props}
-      rotation={rotate}
-    />
-    )
+    <FontAwesomeIcon icon={getShimFaName(name)} {...props} rotation={rotate} />
+  )
 }

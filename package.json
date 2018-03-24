@@ -41,7 +41,7 @@
     "lodash": "^4.17.5"
   },
   "scripts": {
-    "format": "prettier --single-quote --no-semi --trailing-comma all ./**/*.ts  --write",
+    "format": "prettier --single-quote --no-semi --trailing-comma all ./**/*.{ts,tsx}  --write",
     "build": "tsc",
     "test": "jest --watch",
     "test:ci": "jest"

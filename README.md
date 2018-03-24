@@ -28,4 +28,27 @@ import '@skagami/react-fontawesome/inject'
 __IMPORTANT__: same as official component, [you'll need to add the icons yourself](https://github.com/FortAwesome/react-fontawesome#usage).
 
 ## API
-The API is designed to maximize the compat with unofficial `react-fontawesome` and provide more semantic usage for new v5 icons.
+The API is designed to maximize the compat with unofficial `react-fontawesome` and provide more semantic usage for new v5 icons. __Currently only font-awesome@5's svg format icon is supported__.
+
+### Semantic and compact API
+You don't have to combine icon set and icon name in a array to fill in `icon` prop:
+```diff
+- <Icon icon={['fab', 'google-plus-o']} />
++ <Icon fab icon="google-plus-o" />
+```
+`fas|far|far|fab` and `fa`(for explicit v4 icon name usage) Boolean prop is supported.
+
+and `name` prop is also supported:
+```js
+<Icon fab name="google-plus-o" />
+```
+
+### Icon version and name shimming
+The icon version is detected by the following procedure:
+- check if `icon` and `name` prop is `String`, if none of them is `String`, it is a v5 icon.
+- check if `tag` or `fa` is truthy, although `tag` will not take effect. if any of them is truthy, it is a v4 icon
+- check if `fas`, `far`, `fal` and `fab` is all falsy, if any of them is truthy, it is a v5 icon
+- check icon, if icon is truthy and it is not `String`, it is a v5 icon
+- it should be a v4 icon
+
+V4 icon names will be shimmed to v5's

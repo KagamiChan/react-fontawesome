@@ -1,14 +1,29 @@
-/// <reference types="react-fontawesome" />
 /// <reference types="react" />
+import { RotateProp } from '@fortawesome/fontawesome-svg-core';
 import { Props as IconProps } from '@fortawesome/react-fontawesome';
 import { SFC } from 'react';
-import { FontAwesomeProps } from 'react-fontawesome';
-export declare type Props = FontAwesomeProps & IconProps & {
+/**
+ * react-fontawesome's extra props
+ */
+export interface IFontAwesomeExtraProps {
+    ariaLabel?: string;
+    cssModule?: any;
+    tag?: string;
+    rotate?: RotateProp;
+    name?: string;
+    stack?: any;
+}
+/**
+ * semantic props
+ */
+export interface IFontAwesomeProps {
     fal?: boolean;
     far?: boolean;
     fab?: boolean;
     fas?: boolean;
     fa?: boolean;
-};
+    icon: IconProps['icon'] | undefined;
+}
+export declare type Props = IFontAwesomeExtraProps & IconProps & IFontAwesomeProps;
 declare const ReactFontawesome: SFC<Props>;
 export default ReactFontawesome;
