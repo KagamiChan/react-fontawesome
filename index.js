@@ -84,9 +84,11 @@ var ReactFontawesome = function (props) {
     v5 = props.v5, fas = props.fas, far = props.far, fal = props.fal, fab = props.fab, 
     // other props will be directly passed
     otherProps = __rest(props, ["icon", "rotate", "cssModule", "name", "stack", "tag", "v5", "fas", "far", "fal", "fab"]);
-    var finalIcon = exports.isV4(props)
-        ? getFaName(props)
-        : icon;
+    var v4 = exports.isV4(props);
+    var finalIcon = v4 ? getFaName(props) : icon;
+    if (v4 && otherProps.mask && typeof otherProps.mask === 'string') {
+        otherProps.mask = getFaName({ icon: otherProps.mask });
+    }
     return react_1.default.createElement(react_fontawesome_1.FontAwesomeIcon, __assign({ icon: finalIcon, rotation: rotate }, otherProps));
 };
 ReactFontawesome.displayName = 'ReactFontawesome';

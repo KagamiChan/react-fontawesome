@@ -40,12 +40,12 @@ describe('v4 icon detection should work', () => {
     expect(isV4({ v5: true, fal: true })).toBe(false)
     expect(isV4({ v5: true, fab: true })).toBe(false)
 
-    expect(isV4({ tag: 'span', icon: 'github'  })).toBe(true)
+    expect(isV4({ tag: 'span', icon: 'github' })).toBe(true)
 
-    expect(isV4({ fas: true, icon: 'github'  })).toBe(false)
-    expect(isV4({ far: true, icon: 'github'  })).toBe(false)
-    expect(isV4({ fal: true, icon: 'github'  })).toBe(false)
-    expect(isV4({ fab: true, icon: 'github'  })).toBe(false)
+    expect(isV4({ fas: true, icon: 'github' })).toBe(false)
+    expect(isV4({ far: true, icon: 'github' })).toBe(false)
+    expect(isV4({ fal: true, icon: 'github' })).toBe(false)
+    expect(isV4({ fab: true, icon: 'github' })).toBe(false)
   })
 })
 
@@ -57,35 +57,46 @@ describe('wrapper should work', () => {
   it('should mount', () => {
     mount(<Icon name="google" />)
     expect(last((FontAwesomeIcon as jest.Mock).mock.calls)).toBeDefined()
-    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].icon).toEqual(['fab', 'google'])
+    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].icon).toEqual([
+      'fab',
+      'google',
+    ])
 
     mount(<Icon icon={['fab', 'google']} />)
     expect(last((FontAwesomeIcon as jest.Mock).mock.calls)).toBeDefined()
-    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].icon).toEqual(['fab', 'google'])
+    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].icon).toEqual([
+      'fab',
+      'google',
+    ])
 
     mount(<Icon icon={['fas', 'google']} />)
     expect(last((FontAwesomeIcon as jest.Mock).mock.calls)).toBeDefined()
-    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].icon).toEqual(['fas', 'google'])
+    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].icon).toEqual([
+      'fas',
+      'google',
+    ])
   })
 
   it('should pass props', () => {
-    mount(<Icon
-      name="google"
-      mask="google"
-      className="foobar"
-      spin
-      pulse
-      border
-      fixedWidth
-      inverse
-      listItem
-      flip="horizontal"
-      size="2x"
-      pull="left"
-      rotation={90}
-      transform="none"
-      symbol={false}
-    />)
+    mount(
+      <Icon
+        name="google"
+        mask="google"
+        className="foobar"
+        spin
+        pulse
+        border
+        fixedWidth
+        inverse
+        listItem
+        flip="horizontal"
+        size="2x"
+        pull="left"
+        rotation={90}
+        transform="none"
+        symbol={false}
+      />,
+    )
     expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0]).toEqual({
       border: true,
       className: 'foobar',
@@ -108,6 +119,8 @@ describe('wrapper should work', () => {
   it('should pass rotate as rotation', () => {
     mount(<Icon name="google" rotate={90} />)
 
-    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].rotation).toEqual(90)
+    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].rotation).toEqual(
+      90,
+    )
   })
 })

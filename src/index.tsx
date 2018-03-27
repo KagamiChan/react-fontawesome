@@ -133,9 +133,13 @@ const ReactFontawesome: SFC<Props> = (props: Props) => {
     ...otherProps
   } = props
 
-  const finalIcon: IconProp = isV4(props)
-    ? getFaName(props)
-    : (icon as IconProp)
+  const v4: boolean = isV4(props)
+
+  const finalIcon: IconProp = v4 ? getFaName(props) : (icon as IconProp)
+
+  if (v4 && otherProps.mask && typeof otherProps.mask === 'string') {
+    otherProps.mask = getFaName({ icon: otherProps.mask })
+  }
   return <FontAwesomeIcon icon={finalIcon} rotation={rotate} {...otherProps} />
 }
 

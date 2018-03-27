@@ -59,3 +59,5 @@ The icon version is detected by the following procedure:
 - it should be a v4 icon
 
 V4 icon names will be shimmed to v5's
+
+on `mask` prop, if the icon is believe to be v4, and `mask` is `String`, then the mask icon name will also be shimmed
