@@ -1,6 +1,6 @@
 {
   "name": "@skagami/react-fontawesome",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "wrapper for official component, with unofficial component compat",
   "main": "index.js",
   "repository": "git@github.com:KagamiChan/react-fontawesome.git",
