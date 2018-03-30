@@ -1,3 +1,4 @@
+import { IconDefinition } from '@fortawesome/fontawesome-common-types'
 import {
   IconName,
   IconPrefix,
@@ -38,7 +39,8 @@ export interface IFontAwesomeProps {
   fas?: boolean
   v5?: boolean
   // ensure icon could be unset
-  icon?: IconProps['icon']
+  // FIXME: Seems they are using different type system, should check if 5.1 go stable
+  icon?: IconProps['icon'] | IconDefinition
 }
 
 export type Props = IFontAwesomeExtraProps &

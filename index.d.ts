@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { RotateProp } from '@fortawesome/fontawesome-svg-core';
 import { Props as IconProps } from '@fortawesome/react-fontawesome';
 import { SFC } from 'react';
@@ -30,7 +31,7 @@ export interface IFontAwesomeProps {
     fab?: boolean;
     fas?: boolean;
     v5?: boolean;
-    icon?: IconProps['icon'];
+    icon?: IconProps['icon'] | IconDefinition;
 }
 export declare type Props = IFontAwesomeExtraProps & Omit<IconProps, 'icon'> & IFontAwesomeProps;
 export declare const isV4: ({ icon, name, tag, v5, fas, far, fal, fab, }: Props) => boolean;

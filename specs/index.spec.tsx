@@ -1,4 +1,5 @@
 jest.mock('@fortawesome/react-fontawesome')
+import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { mount } from 'enzyme'
 import { last } from 'lodash'
@@ -121,6 +122,14 @@ describe('wrapper should work', () => {
 
     expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].rotation).toEqual(
       90,
+    )
+  })
+
+  it('should work with icon object', () => {
+    mount(<Icon icon={faGithub} />)
+
+    expect(last((FontAwesomeIcon as jest.Mock).mock.calls)[0].icon).toEqual(
+      faGithub,
     )
   })
 })
