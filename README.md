@@ -2,9 +2,20 @@
 
 Wrapper for official component, with unofficial component compat.
 
-Currently not production ready, please check later.
+Currently in beta stage.
 
 Since Font-awesome v5 has divided icons into different sets, and renamed many icons, usages with [`react-fontawesome`](https://github.com/danawoodman/react-fontawesome) package could not be updated to [`official component`](https://github.com/FortAwesome/react-fontawesome) in a simple find-and-replace way. This package is created to ease the migration, wrapping the official component and automatically shimming v4 icon name.
+
+## Installation
+```shell
+yarn add @skagami/react-fontawesome
+```
+or
+```shell
+npm install @skagami/react-fontawesome
+```
+
+Note that you should also install `@fortawesome/react-svg-core` and `@fortawesome/react-fontawesome`. Due to the API change in FontAwesome 5.1, you should install the version that satisfy the peer dependencies. It seems the official package keeps changing with every pre-release, please report any incompat you meet.
 
 ## Usage
 ### Replacement
