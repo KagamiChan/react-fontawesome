@@ -8,11 +8,11 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
-    "@fortawesome/fontawesome-free-brands": "^5.0.8",
-    "@fortawesome/fontawesome-free-solid": "^5.0.8",
-    "@fortawesome/fontawesome-svg-core": "^1.2.0-7",
-    "@fortawesome/react-fontawesome": "^0.1.0-6",
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-10",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0-4",
+    "@fortawesome/free-regular-svg-icons": "^5.1.0-4",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-4",
+    "@fortawesome/react-fontawesome": "^0.1.0-8",
     "@types/enzyme": "^3.1.9",
     "@types/enzyme-adapter-react-16": "^1.0.2",
     "@types/jest": "^22.2.0",
@@ -32,7 +32,7 @@
     "typescript": "^2.7.2"
   },
   "peerDependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-10",
     "@fortawesome/react-fontawesome": "^0.1.0-6",
     "react": "^15.5.0 | ^16.2.0",
     "react-dom": "^15.5.0 | ^16.2.0"
