@@ -1,5 +1,7 @@
 # react-fontawesome
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/KagamiChan/react-fontawesome.svg)](https://greenkeeper.io/)
+
 Wrapper for official component, with unofficial component compat.
 
 Currently in beta stage.
