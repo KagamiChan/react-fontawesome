@@ -1,5 +1,5 @@
 jest.mock('@fortawesome/react-fontawesome')
-import faGithub from '@fortawesome/free-brands-svg-icons/faGithub'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { mount } from 'enzyme'
 import { last } from 'lodash'

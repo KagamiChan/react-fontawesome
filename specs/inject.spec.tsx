@@ -3,9 +3,12 @@ import { mount } from 'enzyme'
 import React from 'react'
 import FA from 'react-fontawesome'
 
-import '@fortawesome/fontawesome-free-brands'
-import '@fortawesome/fontawesome-free-solid'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import '../src/inject'
+
+library.add(fab, fas)
 
 describe('inject should work', () => {
   it('should render a svg', () => {
