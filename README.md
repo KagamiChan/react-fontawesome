@@ -1,5 +1,12 @@
 # react-fontawesome
 
+
+[![license](https://img.shields.io/npm/l/@skagami/react-fontawesome.svg)](https://github.com/KagamiChan/react-fontawesome/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/@skagami/react-fontawesome.svg)](https://www.npmjs.com/package/%40skagami%2Freact-fontawesome)
+[![CircleCI](https://img.shields.io/circleci/project/github/KagamiChan/react-fontawesome.svg)](https://circleci.com/gh/KagamiChan/react-fontawesome)
+[![David](https://img.shields.io/david/kagamichan/react-fontawesome.svg)](https://github.com/KagamiChan/react-fontawesome)
+[![David dev](https://img.shields.io/david/dev/kagamichan/react-fontawesome.svg)](https://github.com/KagamiChan/react-fontawesome)
+[![David peer](https://img.shields.io/david/peer/kagamichan/react-fontawesome.svg)](https://github.com/KagamiChan/react-fontawesome)
 [![Greenkeeper badge](https://badges.greenkeeper.io/KagamiChan/react-fontawesome.svg)](https://greenkeeper.io/)
 
 Wrapper for official component, with unofficial component compat.
