@@ -34,8 +34,8 @@
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0-10",
     "@fortawesome/react-fontawesome": "^0.1.0-6",
-    "react": "^15.5.0 | ^16.2.0",
-    "react-dom": "^15.5.0 | ^16.2.0"
+    "react": ">=15.5.0",
+    "react-dom": ">=15.5.0"
   },
   "dependencies": {
     "lodash": "^4.17.5"
