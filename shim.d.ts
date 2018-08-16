@@ -6,6 +6,6 @@ export declare type shimEntry = [string, IconPrefix | null, IconName | null];
  * @param {String} nameV4 icon name in v4
  * @returns {Array} [ type, prefixed name ]
  */
-declare const getShimFaName: ((nameV4: string) => ["fas" | "fab" | "far" | "fal", IconName]) & MemoizedFunction;
+declare const getShimFaName: ((nameV4: string) => [IconPrefix, IconName]) & MemoizedFunction;
 export declare type MemoizedFunction = MemoizedFunction;
 export default getShimFaName;

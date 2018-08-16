@@ -12,10 +12,8 @@ import {
 import React, { SFC } from 'react'
 import shim from './shim'
 
-// Diff / Omit taken from https://github.com/Microsoft/TypeScript/issues/12215#issuecomment-311923766
-export type Diff<T extends string, U extends string> = ({ [P in T]: P } &
-  { [P in U]: never } & { [x: string]: never })[T]
-export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>
+// Diff / Omit taken from https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
 /**
  * react-fontawesome's extra props
