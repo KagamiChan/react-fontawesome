@@ -6,7 +6,7 @@ import memoize from 'lodash/memoize'
 export type shimEntry = [string, IconPrefix | null, IconName | null]
 
 /**
- * shims from https://github.com/FortAwesome/Font-Awesome/blob/31281606f5205b0191c17c3b4d2d56e1ddbb2dc6/svg-with-js/js/fa-v4-shims.js
+ * shims from https://github.com/FortAwesome/Font-Awesome/blob/03bcd4dc0831f0651a3b5a7cd41153e8129fccf3/svg-with-js/js/fa-v4-shims.js
  * by @fontawesome, MIT License
  */
 const shims: shimEntry[] = [
@@ -40,6 +40,7 @@ const shims: shimEntry[] = [
   ['times-circle-o', 'far', 'times-circle'],
   ['check-circle-o', 'far', 'check-circle'],
   ['mail-forward', null, 'share'],
+  ['eye', 'far', null],
   ['eye-slash', 'far', null],
   ['warning', null, 'exclamation-triangle'],
   ['calendar', null, 'calendar-alt'],
@@ -239,8 +240,8 @@ const shims: shimEntry[] = [
   ['steam-square', 'fab', null],
   ['automobile', null, 'car'],
   ['cab', null, 'taxi'],
-  ['spotify', 'fab', null],
   ['envelope-o', 'far', 'envelope'],
+  ['deviantart', 'fab', null],
   ['soundcloud', 'fab', null],
   ['file-pdf-o', 'far', 'file-pdf'],
   ['file-word-o', 'far', 'file-word'],
@@ -385,8 +386,8 @@ const shims: shimEntry[] = [
   ['calendar-times-o', 'far', 'calendar-times'],
   ['calendar-check-o', 'far', 'calendar-check'],
   ['map-o', 'far', 'map'],
-  ['commenting', null, 'comment-alt'],
-  ['commenting-o', 'far', 'comment-alt'],
+  ['commenting', 'far', 'comment-dots'],
+  ['commenting-o', 'far', 'comment-dots'],
   ['houzz', 'fab', null],
   ['vimeo', 'fab', 'vimeo-v'],
   ['black-tie', 'fab', null],
@@ -469,7 +470,7 @@ const shims: shimEntry[] = [
   ['snowflake-o', 'far', 'snowflake'],
   ['superpowers', 'fab', null],
   ['wpexplorer', 'fab', null],
-  ['deviantart', 'fab', null],
+  ['spotify', 'fab', null],
 ]
 
 /**
