@@ -477,18 +477,17 @@ const shims: shimEntry[] = [
  * @param {String} nameV4 icon name in v4
  * @returns {Array} [ type, prefixed name ]
  */
-const getShimFaName = memoize((nameV4: IconName | string): [
-  IconPrefix,
-  IconName
-] => {
-  const shim: shimEntry | undefined = find(
-    shims,
-    ([name]: shimEntry) => name === nameV4,
-  )
-  return shim
-    ? [shim[1] || 'fas', shim[2] || (nameV4 as IconName)]
-    : ['fas', nameV4 as IconName]
-})
+const getShimFaName = memoize(
+  (nameV4: IconName | string): [IconPrefix, IconName] => {
+    const shim: shimEntry | undefined = find(
+      shims,
+      ([name]: shimEntry) => name === nameV4,
+    )
+    return shim
+      ? [shim[1] || 'fas', shim[2] || (nameV4 as IconName)]
+      : ['fas', nameV4 as IconName]
+  },
+)
 
 export type MemoizedFunction = MemoizedFunction
 

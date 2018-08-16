@@ -7,6 +7,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import FA from 'react-fontawesome'
+
 import getShimFaName from './shim'
 
 // redefine props typecheck since we manupulate on prototype
