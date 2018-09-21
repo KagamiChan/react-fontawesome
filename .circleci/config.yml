@@ -5,12 +5,9 @@
 version: 2
 jobs:
   build:
-    # use Greenkeeper circleci context
-    context: Greenkeeper
-
     docker:
       # specify the version you desire here
-      - image: circleci/node:9
+      - image: circleci/node:10
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -29,17 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
-
-      - run:
-          name: prepare greenkeeper-lockfile
-          command: |
-            echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
-            source $BASH_ENV
-            yarn global add greenkeeper-lockfile@1
-
-      # update lockfile for greenkeeper
-      - run: greenkeeper-lockfile-update
+      - run: yarn install --frozen-lockfile
 
       - save_cache:
           paths:
@@ -48,8 +35,3 @@ jobs:
 
       # run tests!
       - run: yarn test:ci
-
-      # upload lockfile for greenkeeper
-      - run: greenkeeper-lockfile-upload
-
-
