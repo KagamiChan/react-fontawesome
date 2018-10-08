@@ -20,11 +20,15 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.2.tgz#7fd64eacf7f64e4d7619d21b0b2f2467f5a70611"
 
-"@fortawesome/fontawesome-svg-core@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.2.tgz#b431e7efb3e3a1887e596daa6ed0d241d2d1aea5"
+"@fortawesome/fontawesome-common-types@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.5.tgz#a7f660607997b019cc985d525ec37d2fb72df926"
+
+"@fortawesome/fontawesome-svg-core@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.5.tgz#590eae58179e904b55f6049582fc9f7719a77e6a"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.2"
+    "@fortawesome/fontawesome-common-types" "^0.2.5"
 
 "@fortawesome/free-brands-svg-icons@^5.2.0":
   version "5.2.0"
@@ -32,21 +36,21 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.2"
 
-"@fortawesome/free-regular-svg-icons@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.2.0.tgz#6e96f19e349ac0d19b6758255c777f7331aeb40c"
+"@fortawesome/free-regular-svg-icons@^5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.4.0.tgz#eaba4423cbc06d695a4e2da874b136782e0c1fc7"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.2"
+    "@fortawesome/fontawesome-common-types" "^0.2.5"
 
-"@fortawesome/free-solid-svg-icons@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.2.0.tgz#b51c1d49278ef538a97c0ce9575a1b54cc1a52dc"
+"@fortawesome/free-solid-svg-icons@^5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.4.0.tgz#5f9494bc8ce98e07a0cefef3537aeca08b550cad"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.2"
+    "@fortawesome/fontawesome-common-types" "^0.2.5"
 
-"@fortawesome/react-fontawesome@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.2.tgz#baad4a6508867567aea20c1551bf62ff090d8121"
+"@fortawesome/react-fontawesome@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.3.tgz#266b4047892c3d10498af1075d89252f74015b11"
   dependencies:
     humps "^2.0.1"
     prop-types "^15.5.10"
