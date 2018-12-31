@@ -68,9 +68,10 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/jest@^23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.1.tgz#a4319aedb071d478e6f407d1c4578ec8156829cf"
+"@types/jest@^23.3.11":
+  version "23.3.11"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.11.tgz#d3a936ae753d9e484965f5cbd19027c2b8af2551"
+  integrity sha512-eroF85PoG87XjCwzxey7yBsQNkIY/TV5myKKSG/022A0FW25afdu/uub6JDMS5eT68zBBt82S+w/MFOTjeLM3Q==
 
 "@types/lodash@^4.14.116":
   version "4.14.116"
